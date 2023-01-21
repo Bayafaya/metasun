@@ -1,0 +1,55 @@
+.head {
+  width: 100%;
+  background: #101010;
+  padding: 14px 16px 14px 24px;
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  .navigation {
+   margin-left: 122px;
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      margin-left: 0px;
+      li {
+        a {
+          font-family: "Inter";
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.25px;
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: white;
+          gap: 70px;
+          &::after {
+            content: url("../images/UpArrow.svg");
+          }
+        }
+      }
+    }
+  }
+  .contacts{
+    margin-left: auto;
+    a {
+          font-family: "Inter";
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.25px;
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: white;
+          gap: 70px;
+          &::after {
+            content: url("../images/UpArrow.svg");
+          }
+        }
+  }
+}

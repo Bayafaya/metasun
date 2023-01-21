@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: black;
+  background-image: url('./images/image 32.png'),url('./images/Lines.svg');
+  height: 100vh;
+  background-size: cover,contain;
+  background-position: center;
+  color: white;
+}
+@font-face {
+  font-family: 'Pixel Cyr';
+  src: url('./fonts/DSPixelCyr.eot');
+  src: url('./fonts/DSPixelCyr.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/DSPixelCyr.woff2') format('woff2'),
+      url('./fonts/DSPixelCyr.woff') format('woff'),
+      url('./fonts/DSPixelCyr.ttf') format('truetype'),
+      url('./fonts/DSPixelCyr.svg#DSPixelCyr') format('svg');
+  font-weight: 100,200,300,400,500,600,700,800,900;
+  font-style: normal;
+  font-display: swap;
+}
