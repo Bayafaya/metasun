@@ -1,7 +1,26 @@
-
 .canvases {
-    display: block;
-    position: relative;
-   width: 568px;
-   height: 320px;
-    }
+  display: block;
+  position: relative;
+  height: 320px;
+  width: 568px;
+  align-self: center;
+  @media screen and (max-width: 1400px) {
+    width: 440px;
+    height: 260px;
+  }
+  @media screen and (max-width: 1150px) {
+    width: 360px;
+    height: 180px;
+  }
+  @media screen and (max-width: 820px) {
+    
+            width: 440px;
+            height: 260px;
+   
+    
+  }
+  @media screen and (max-width: 470px) {
+    width: 320px;
+    height: 180px;
+}
+}

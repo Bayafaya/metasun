@@ -8,13 +8,6 @@ import Matrix from "./components/Matrix";
 import SunTry from "./components/SunTry";
 
 function App() {
-  useEffect(() => {
-    let url = window.location.href.split("/");
-    let target = url[url.length - 1].toLowerCase();
-    let element = document.getElementById(target);
-    element && element.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, []);
-
 
   return (
     <div className="container">
@@ -29,8 +22,8 @@ function App() {
           </p>
           <div className="hero">
             <div className="light_block">
-              <p className="text">
-                Build <span>the future</span>
+              <p>
+                Build <br /> <span>the future</span>
               </p>{" "}
               <DustOfLights />
             </div>
@@ -129,7 +122,11 @@ function App() {
           <h1>Projects</h1>
           <div className="cards__block">
             <div className="card__item">
-              <Matrix />
+              <div className="animations">   
+                <Matrix />
+
+              </div>
+           
               <h4>CryptoChurch</h4>
               <p>
                 Donec facilisis tortor ut augue lacinia, at viverra est semper.
@@ -137,7 +134,11 @@ function App() {
               </p>
             </div>
             <div className="card__item">
+              
+              <div className="animations">
               <img src="src/images/background.png" alt="background" />
+              </div>
+          
               <h4>The name of project one</h4>
               <p>
                 Donec facilisis tortor ut augue lacinia, at viverra est semper.

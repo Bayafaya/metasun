@@ -12,7 +12,10 @@ body{
   background-size: contain,80%;
   background-position: center;
   color: white;
+
 }
+
+
 @font-face {
   font-family: 'Pixel Cyr';
   src: url('./fonts/DSPixelCyr.eot');
@@ -24,4 +27,9 @@ body{
   font-weight: 100,200,300,400,500,600,700,800,900;
   font-style: normal;
   font-display: swap;
+}
+@media(max-width:890px){
+  body{
+    background-size: contain,contain;
+  }
 }

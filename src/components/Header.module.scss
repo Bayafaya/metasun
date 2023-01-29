@@ -1,5 +1,4 @@
 
-
 .head {
   background-color: #ddd;
   position: fixed;
@@ -11,6 +10,12 @@
   align-items: center;
   margin-top: 24px;
   z-index: 20;
+  @media screen and (max-width: 1200px) {
+justify-content: space-between;
+  }
+  @media screen and (max-width: 990px) {
+    width: 90%;
+      }
 
 }
 .contacts {
@@ -32,6 +37,18 @@
       content: url("../images/UpArrow.svg");
     }
   }
+  @media screen and (max-width: 1200px) {
+    margin-left: 22px;
+  
+        a{
+          &::after {
+            display: none;
+          }
+        }
+  }
+  @media screen and (max-width: 700px) {
+    display: none;
+      }
 }
 .navigation .dropdown {
   position: absolute;
@@ -102,13 +119,21 @@
     }
   }
   @media screen and (max-width: 1200px) {
-    margin-left: 62px;
+    margin-left: 22px;
+  }
+  @media screen and (max-width: 1200px) {
+    margin-left: 22px;
     ul{
       li{
         a{
-       
+          &::after {
+            display: none;
+          }
         }
       }
     }
   }
+  @media screen and (max-width: 700px) {
+    display: none;
+      }
 }

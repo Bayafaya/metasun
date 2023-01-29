@@ -5,4 +5,36 @@
     overflow: hidden;
     transition: 1s all;
     z-index: -1;
+    @media screen and (max-width: 1350px) {
+    top: 45%;
+    left: 25%;
+  }
+    @media screen and (max-width: 890px) {
+    top: 45%;
+    left: 20%;
+  }
+  @media screen and (max-width: 760px) {
+    top: 45%;
+    left: 12%;
+  }
+  @media screen and (max-width: 620px) {
+    top: 45%;
+    left: 8%;
+  }
+  @media screen and (max-width: 550px) {
+    top: 45%;
+    left: 1%;
+  }
+  @media screen and (max-width: 480px) {
+    top: 45%;
+    left: -4%;
+  }
+  @media screen and (max-width: 430px) {
+    top: 45%;
+    left: -6%;
+  }
+  @media screen and (max-width: 400px) {
+    top: 45%;
+    left: -12%;
+  }
 }

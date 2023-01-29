@@ -1,5 +1,5 @@
 :root {
-    --glitch-width: 340px;
+    --glitch-width: 380px;
     --glitch-height: 63px;
     
     --gap-horizontal: 8px;
@@ -20,12 +20,17 @@
     --blend-color-4: transparent;
     --blend-color-5: #af4949;
     
-    --background-image: url('../images/hacker.jpg');
+    --background-image: url('../images/hacker.png');
+    @media screen and (max-width: 1520px) {
+      --glitch-width: 260px;
+      --glitch-height: 62px;
+    }
+    @media screen and (max-width: 990px) {
+      --glitch-width: 100%;
+      --glitch-height: 82px;
+    }
   }
-  * {
-    margin: 0;
-    padding: 0;
-  }
+
   .glitch {
     position: relative;
     width: var(--glitch-width);

@@ -3,6 +3,7 @@ import style from "./Header.module.scss";
 import logo from "../images/Logo.svg";
 import Contacts from "./Contacts";
 import { useEffect } from "react";
+import './Hamburger.scss'
 function Header() {
   const [contactsActive, setContactsActive] = useState(false);
 
@@ -65,12 +66,17 @@ function Header() {
             </li>
           </ul>
         </nav>
-        <div  class="hamburger">
-    
-        </div>
+
 
         <div className={style.contacts}>
           <a onClick={() => setContactsActive(true)}>Contacts us</a>
+        </div>
+        {/* ----- */}
+        <div class="hamburger">
+          <input id="menu-toggle" type="checkbox" />
+          <label class="menu-button-container" for="menu-toggle">
+            <div class="menu-button"></div>
+          </label>
         </div>
       </header>
       <Contacts active={contactsActive} setActive={setContactsActive} />

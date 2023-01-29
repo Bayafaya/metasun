@@ -1,20 +1,22 @@
 import React from "react";
 import { useEffect } from "react";
 import style from './Matrix.module.scss'
+
 function Matrix() {
     useEffect(()=>{
         let canvas = document.getElementById( 'canvas' ),
         ctx = canvas.getContext( '2d' ),
             // full screen dimensions
-            cw = 568,
-            ch = 320,
+            cw = document.querySelector(`.${style.canvases}`).clientWidth,
+            ch = document.querySelector(`.${style.canvases}`).clientHeight,
         charArr = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'],
         maxCharCount = 100,
         fallingCharArr = [],
         fontSize = 12,
         maxColums = cw/(fontSize);
+  
         canvas.width = cw;
-        canvas.height = ch;
+        canvas.height =  ch;
     
     
         function randomInt( min, max ) {
@@ -81,7 +83,6 @@ function Matrix() {
   return (
     <div>
       <canvas className={style.canvases} id="canvas">Canvas is not supported in your browser.</canvas>
-
     </div>
   );
 }
