@@ -1,55 +1,114 @@
+
+
 .head {
-  width: 100%;
+  background-color: #ddd;
+  position: fixed;
+  width: 80%;
+  max-width: 1500px;
   background: #101010;
   padding: 14px 16px 14px 24px;
   display: flex;
   align-items: center;
   margin-top: 24px;
-  .navigation {
-   margin-left: 122px;
-    ul {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      gap: 50px;
-      margin-left: 0px;
-      li {
-        a {
-          font-family: "Inter";
-          font-weight: 700;
-          font-size: 14px;
-          line-height: 20px;
-          letter-spacing: 0.25px;
-          text-transform: uppercase;
-          display: flex;
-          align-items: center;
-          text-decoration: none;
-          color: white;
-          gap: 70px;
-          &::after {
-            content: url("../images/UpArrow.svg");
-          }
+  z-index: 20;
+
+}
+.contacts {
+  margin-left: auto;
+  cursor: pointer;
+  a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    gap: 70px;
+    &::after {
+      content: url("../images/UpArrow.svg");
+    }
+  }
+}
+.navigation .dropdown {
+  position: absolute;
+  z-index: 20;
+  background-color: #101010;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s ease-in-out;
+  li {
+    display: block;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px 12px;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    &:hover{
+      color: #FBB92C;
+    }
+  }
+  }
+
+
+.navigation {
+  margin-left: 122px;
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-left: 0px;
+    transition: 0.5s;
+    li {
+      a {
+        font-family: "Inter";
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.25px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        color: white;
+        gap: 70px;
+        transition: 0.5s ease-in-out;
+        &::after {
+          content: url("../images/UpArrow.svg");
+          color: #FBB92C;
+          right: 0;
+        }
+        &:hover{
+          color: #FBB92C;
         }
       }
     }
+    &:hover ul.dropdown {
+      display: block;
+      opacity: 1;
+      pointer-events: all;
+    }
   }
-  .contacts{
-    margin-left: auto;
-    a {
-          font-family: "Inter";
-          font-weight: 700;
-          font-size: 14px;
-          line-height: 20px;
-          letter-spacing: 0.25px;
-          text-transform: uppercase;
-          display: flex;
-          align-items: center;
-          text-decoration: none;
-          color: white;
-          gap: 70px;
-          &::after {
-            content: url("../images/UpArrow.svg");
-          }
+  @media screen and (max-width: 1200px) {
+    margin-left: 62px;
+    ul{
+      li{
+        a{
+       
         }
+      }
+    }
   }
 }

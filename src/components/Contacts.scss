@@ -1,0 +1,63 @@
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(8, 7, 7, 0.9), no-repeat;
+  backdrop-filter: blur(12px);
+  background-image: url("src/images/contacts_circle.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s ease-in-out;
+
+  .exit{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  .modal__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    p {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      text-align: center;
+      letter-spacing: -0.6px;
+      color: rgba(255, 255, 255, 0.75);
+    }
+    h1 {
+      font-family: "Inter";
+      text-transform: uppercase;
+      font-size: 72px;
+      line-height: 42px;
+      font-weight: 700;
+      span {
+        font-family: "Pixel Cyr";
+        color: #fbb92c;
+        font-size: 72px;
+        line-height: 42px;
+        font-weight: 700;
+      }
+    }
+    .community_links{
+        display: flex;
+        gap: 32px;
+    }
+  }
+}
+.active{
+    opacity: 1;
+    pointer-events: all;
+  }
