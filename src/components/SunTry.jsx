@@ -14,19 +14,19 @@ function SunTry() {
     const whereIam = window.pageYOffset;
     const bodyWidth = window.innerWidth;
     let defaultScale = 1.4;
-    console.log(bodyWidth);
     if(bodyWidth < 980 ){
       let defaultScale = 1;
       const percentWhereIam = (whereIam/( bodyHeight - window.innerHeight)) * 100;
       // -----------------scale-------------------
           setScale(defaultScale * (1 - percentWhereIam / 100)) 
     }
-    // else if(bodyWidth < 600){
-    //   let defaultScale = 1;
-    //   const percentWhereIam = (whereIam/( bodyHeight - window.innerHeight)) * 100;
-    //   // -----------------scale-------------------
-    //       setScale(defaultScale * (1 - percentWhereIam / 100)) 
-    // }
+    else{  
+      const percentWhereIam = (whereIam/( bodyHeight - window.innerHeight)) * 100;
+      // -----------------scale-------------------
+          setScale(defaultScale * (1 - percentWhereIam / 100)) 
+
+    }
+ 
 
 // ------------------------------------
 

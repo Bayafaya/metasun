@@ -4,7 +4,7 @@ import logo from "../images/Logo.svg";
 import Contacts from "./Contacts";
 import { useEffect } from "react";
 import './Hamburger.scss'
-function Header() {
+function Header() { 
   const [contactsActive, setContactsActive] = useState(false);
 
   useEffect(() => {
@@ -21,6 +21,7 @@ function Header() {
     hero && hero.scrollIntoView({ behavior: "smooth", block: "start" });
     window.history.pushState(`${blockId}`, `${blockId}`, `/${blockId}`);
   };
+ 
   return (
     <>
       <header className={style.head}>
@@ -28,7 +29,7 @@ function Header() {
         <nav className={style.navigation}>
           <ul>
             <li>
-              <a onClick={(e) => smoothScroll(e)} href="1">
+              <a >
                 What We Do
               </a>
               <ul className={style.dropdown}>

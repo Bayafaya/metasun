@@ -5,15 +5,17 @@ import DustOfLights from "./components/DustOfLights";
 import GlitchBox from "./components/GlitchBox";
 import Header from "./components/Header";
 import Matrix from "./components/Matrix";
+import NewHeader from "./components/NewHeader";
 import SunTry from "./components/SunTry";
 
 function App() {
 
   return (
+  
     <div className="container">
       <SunTry />
 
-      <Header />
+       <NewHeader/>
 
       <div id="1" className="firs_block">
         <main className="main_section">
@@ -161,4 +163,4 @@ function App() {
 }
 
 export default App;
-//
+
