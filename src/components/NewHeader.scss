@@ -13,6 +13,7 @@
   position: fixed;
   margin-top: 24px;
   padding: 14px 16px 14px 24px;
+  z-index: 20;
   @media screen and (max-width: 990px) {
     width: 90%;
   }
@@ -30,15 +31,17 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 80%;
-
   li {
     display: flex;
     gap: 20px;
     cursor: pointer;
-    a{
+    padding: 0 24px;
+    a {
       text-decoration: none;
       color: #fff;
+      &:hover {
+        color: #fbb92c;
+      }
     }
     &:first-child:hover ul.dropdown {
       display: block;
@@ -46,51 +49,60 @@
       pointer-events: all;
     }
     &:first-child:active ul.dropdown {
-        display: block;
-        opacity: 1;
-        pointer-events: all;
-      }
+      display: block;
+      opacity: 1;
+      pointer-events: all;
+    }
     &:last-child {
       margin-left: auto;
     }
     &::after {
       content: url("../images/UpArrow.svg");
     }
-  }
-}
-.dropdown {
-  list-style: none;
-  position: absolute;
-  z-index: 20;
-  background-color: #101010;
-  display: block;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.5s ease-in-out;
-  margin-top: 28px;
-  li {
-    display: block;
-    font-family: "Inter";
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.25px;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 20px 12px;
-    color: white;
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-    display: flex;
-    justify-content: space-between;
-    &:hover {
-      color: #fbb92c;
+    &:hover::after {
+      filter: brightness(0) saturate(100%) invert(64%) sepia(94%) saturate(390%)
+        hue-rotate(352deg) brightness(103%) contrast(97%);
     }
   }
 }
 
+.active {
+  color: #fbb92c;
+}
+
+// .dropdown {
+//   list-style: none;
+//   position: absolute;
+//   z-index: 20;
+//   background-color: #101010;
+//   display: block;
+//   opacity: 0;
+//   pointer-events: none;
+//   transition: 0.5s ease-in-out;
+//   margin-top: 28px;
+//   li {
+//     display: block;
+//     font-family: "Inter";
+//     font-weight: 700;
+//     font-size: 14px;
+//     line-height: 20px;
+//     letter-spacing: 0.25px;
+//     text-transform: uppercase;
+//     text-decoration: none;
+//     padding: 20px 12px;
+//     color: white;
+//     cursor: pointer;
+//     transition: 0.5s ease-in-out;
+//     display: flex;
+//     justify-content: space-between;
+//     &:hover {
+//       color: #fbb92c;
+//     }
+//   }
+// }
+
 .menu > li {
-  margin: 0 1rem;
+  margin: 0;
   overflow: hidden;
 }
 

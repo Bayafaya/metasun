@@ -1,40 +1,51 @@
-.sun{
-    position: fixed;
-    top: 45%;
-    left: 35%;
-    overflow: hidden;
-    transition: 1s all;
-    z-index: -1;
-    @media screen and (max-width: 1350px) {
-    top: 45%;
+.sun {
+  position: fixed;
+  top: 45%;
+  left: 35%;
+  overflow: hidden;
+  transition: 1s all;
+  z-index: -2;
+  @media screen and (max-width: 1350px) {
     left: 25%;
   }
-    @media screen and (max-width: 890px) {
-    top: 45%;
+  @media screen and (max-width: 890px) {
     left: 20%;
   }
   @media screen and (max-width: 760px) {
-    top: 45%;
     left: 12%;
   }
   @media screen and (max-width: 620px) {
-    top: 45%;
     left: 8%;
   }
   @media screen and (max-width: 550px) {
-    top: 45%;
     left: 1%;
   }
   @media screen and (max-width: 480px) {
-    top: 45%;
     left: -4%;
   }
   @media screen and (max-width: 430px) {
-    top: 45%;
     left: -6%;
   }
   @media screen and (max-width: 400px) {
-    top: 45%;
     left: -12%;
+  }
+}
+.distance__of__sun {
+  position: fixed;
+  top: 50%;
+  left: 5%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 2.25px;
+  color: rgba(255, 255, 255, 0.7);
+  transform: rotate(-90deg);
+  @media screen and (max-width: 725px) {
+    left: -2%;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 2.25px;
   }
 }

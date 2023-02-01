@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import Contacts from "./Contacts";
 import './NewHeader.scss'
 
-function NewHeader() {
-  const [contactsActive, setContactsActive] = useState(false);
+function NewHeader({active,setActive}) {
+
 
   useEffect(() => {
     let url = window.location.href.split("/");
@@ -23,15 +23,15 @@ function NewHeader() {
     <>
 
     <div class="top-nav">
-      <div><img src="src/images/Logo.svg" alt="Logo" /></div>
+      <div><img src="/images/Logo.svg" alt="Logo" /></div>
       <input id="menu-toggle" type="checkbox" />
       <label class="menu-button-container" for="menu-toggle">
         <div class="menu-button"></div>
       </label>
       <ul class="menu">
         <li>
-          <a onClick={(e) => smoothScroll(e)} href="1">What we do</a>
-          <ul class="dropdown">
+          <a  onClick={(e) => smoothScroll(e)} href="1">What we do</a>
+          {/* <ul class="dropdown">
             <li>
               <a onClick={(e) => smoothScroll(e)} href="1">Comprehensive WEB3</a>
             </li>
@@ -47,13 +47,13 @@ function NewHeader() {
             <li>
               <a onClick={(e) => smoothScroll(e)} href="5">Proven track record</a>
             </li>
-          </ul>
+          </ul> */}
         </li>
-        <li><a onClick={(e) => smoothScroll(e)} href="6">Projects</a></li>
-        <li><a onClick={() => setContactsActive(true)}>contact us</a></li>
+        <li ><a onClick={(e) => smoothScroll(e)} href="8">Projects</a></li>
+        <li onClick={() => setActive(true)}><a >contact us</a></li>
       </ul>
     </div>
-    <Contacts active={contactsActive} setActive={setContactsActive} />
+    <Contacts active={active} setActive={setActive} />
     </>
   );
 }

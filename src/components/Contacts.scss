@@ -55,6 +55,15 @@
         display: flex;
         gap: 32px;
     }
+    .icon{
+      &:hover{
+        fill: #fbb92c;
+        .inner_icon{
+            fill: #000;   
+        }
+      }
+    }
+  
   }
   @media screen and (max-width: 780px) {
   background-size: contain;

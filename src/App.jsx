@@ -3,19 +3,20 @@ import "./App.scss";
 
 import DustOfLights from "./components/DustOfLights";
 import GlitchBox from "./components/GlitchBox";
-import Header from "./components/Header";
 import Matrix from "./components/Matrix";
 import NewHeader from "./components/NewHeader";
 import SunTry from "./components/SunTry";
 
 function App() {
-
+  const [contactsActive, setContactsActive] = useState(false);
+  const changeState = (newValue)=>{
+    setContactsActive(newValue)
+  }
   return (
-  
     <div className="container">
       <SunTry />
-
-       <NewHeader/>
+    <div className="opacity__for_firs_block"></div>
+       <NewHeader active={contactsActive} setActive={changeState}/>
 
       <div id="1" className="firs_block">
         <main className="main_section">
@@ -43,17 +44,20 @@ function App() {
           </p>
         </main>
 
-          <div className="discover_button">
-            <img src="src/images/left-up_arrow.svg" alt="left-up_arrow" />
+          <div className="discover_button" onClick={()=>setContactsActive(true)}>
+            <img src="/images/left-up_arrow.svg" alt="left-up_arrow" />
             <span>
               Discover <br /> Metasun
             </span>
           </div>
       </div>
+      <div id='2' className="new_block">
+       
+      </div>
       {/* ----------------1----------------- */}
-      <div id="2" className="new_block">
+      <div id="3" className="new_block">
         <div className="our__works">
-          <img src="src/images/project_1.png" alt="project_1" />
+          <img src="/images/project_1.png" alt="project_1" />
           <div className="our__projects__text">
             <h1>Comprehensive WEB3 Development Services</h1>
             <p>
@@ -64,9 +68,9 @@ function App() {
         </div>
       </div>
       {/* ---------------2------------------ */}
-      <div id="3" className="new_block">
+      <div id="4" className="new_block">
         <div className="our__works">
-          <img src="src/images/project_2.png" alt="project_1" />
+          <img src="/images/project_2.png" alt="project_1" />
           <div className="our__projects__text">
             <h1>Quality assurance</h1>
             <p>
@@ -78,9 +82,9 @@ function App() {
         </div>
       </div>
       {/* ----------------3----------------- */}
-      <div id="4" className="new_block">
+      <div id="5" className="new_block">
         <div className="our__works">
-          <img src="src/images/project_3.png" alt="project_1" />
+          <img src="/images/project_3.png" alt="project_1" />
           <div className="our__projects__text">
             <h1>Fast turn around times</h1>
             <p>
@@ -91,9 +95,9 @@ function App() {
         </div>
       </div>
       {/* ----------------4----------------- */}
-      <div id="5" className="new_block">
+      <div id="6" className="new_block">
         <div className="our__works">
-          <img src="src/images/project_4.png" alt="project_1" />
+          <img src="/images/project_4.png" alt="project_1" />
           <div className="our__projects__text">
             <h1>Customized solutions</h1>
             <p>
@@ -105,9 +109,9 @@ function App() {
         </div>
       </div>
       {/* ----------------5----------------- */}
-      <div id="6" className="new_block">
+      <div id="7" className="new_block">
         <div className="our__works">
-          <img src="src/images/project_5.png" alt="project_1" />
+          <img src="/images/project_5.png" alt="project_1" />
           <div className="our__projects__text">
             <h1>Proven track record</h1>
             <p>
@@ -119,7 +123,7 @@ function App() {
         </div>
       </div>
       {/* -----------------projects----------------- */}
-      <div id="projects" className="new_block">
+      <div id="8" className="new_block">
         <div className="our__projects">
           <h1>Projects</h1>
           <div className="cards__block">
@@ -138,7 +142,7 @@ function App() {
             <div className="card__item">
               
               <div className="animations">
-              <img src="src/images/background.png" alt="background" />
+              <img src="/images/background.png" alt="background" />
               </div>
           
               <h4>The name of project one</h4>
@@ -153,7 +157,7 @@ function App() {
       {/* ----------footer------------- */}
       <footer className="foot">
         <a href="#">@METASUN Services FZ-LLC.</a>
-        <img src="src/images/Logo.svg" alt="logo" />
+        <img src="/images/Logo.svg" alt="logo" />
         <div>
           <span>Terms Of Service &nbsp; Privacy Policy</span>
         </div>
