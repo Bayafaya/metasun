@@ -166,8 +166,13 @@
   gap: 16px;
   align-items: center;
   cursor: pointer;
-  img{
-    cursor: pointer;
+  .icon{
+    &:hover{
+      fill: #fbb92c;
+      .inner_icon{
+          fill: #000;   
+      }
+    }
   }
   span {
     cursor: pointer;
@@ -236,11 +241,14 @@
   @media screen and (max-width: 710px) {
     height: 75%;
     img{
-      width: 280px;
-      height: 120px;
+    display: none;
     }
     .our__projects__text {
       gap: 12px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       h1 {
         width: 280px;
         font-size: 24px;
@@ -260,6 +268,7 @@
     }
     .our__projects__text {
       gap: 12px;
+      padding-left: 24px;
       h1 {
         width: 100%;
       }
@@ -306,13 +315,16 @@
         letter-spacing: 0.25px;
         color: #ffffff;
         cursor: pointer;
-        &::after {
-          content: "";
-          background-image: url("/images/left-up_arrow.svg");
-          background-size: 32px;
+        .icon{
           height: 32px;
           width: 32px;
           float: right;
+          &:hover{
+            fill: #fbb92c;
+            .inner_icon{
+                fill: #000;   
+            }
+          }
         }
       }
       p {
@@ -391,6 +403,26 @@
   justify-content: space-between;
   padding: 56px 0;
   margin-top: 64px;
+  align-items: flex-end;
+  .logo__foot{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    img{
+      width: 112px;
+      height: 20px;
+    }
+  }
+  .join__us__foot{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-end;
+    .join__us__foot__icons{
+      display: flex;
+      gap: 24px;
+    }
+  }
   a {
     font-family: "Inter";
     font-style: normal;
@@ -417,22 +449,26 @@
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    img{
-      order: 1;
-      width: 112px;
-      height: 20px;
-    }
     a {
       font-size: 13px;
       line-height: 16px;
       letter-spacing: 0.15px;
-      order: 3;
     }
     div {
       order: 2;
       font-size: 13px;
       line-height: 16px;
       letter-spacing: 0.15px;
+    }
+    .logo__foot{
+      order: 3;
+  align-items: center;
+    }
+    .join__us__foot{
+      order: 2;
+      span{
+        order: 2;
+      }
     }
   }
 }

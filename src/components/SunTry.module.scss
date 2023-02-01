@@ -42,8 +42,10 @@
   letter-spacing: 2.25px;
   color: rgba(255, 255, 255, 0.7);
   transform: rotate(-90deg);
-  @media screen and (max-width: 725px) {
+  @media screen and (max-width: 990px) {
     left: -2%;
+  }
+  @media screen and (max-width: 725px) {
     font-size: 10px;
     line-height: 16px;
     letter-spacing: 2.25px;

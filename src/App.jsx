@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.scss";
+import "./components/Contacts.scss";
 
 import DustOfLights from "./components/DustOfLights";
 import GlitchBox from "./components/GlitchBox";
@@ -9,14 +10,14 @@ import SunTry from "./components/SunTry";
 
 function App() {
   const [contactsActive, setContactsActive] = useState(false);
-  const changeState = (newValue)=>{
-    setContactsActive(newValue)
-  }
+  const changeState = (newValue) => {
+    setContactsActive(newValue);
+  };
   return (
     <div className="container">
       <SunTry />
-    <div className="opacity__for_firs_block"></div>
-       <NewHeader active={contactsActive} setActive={changeState}/>
+      <div className="opacity__for_firs_block"></div>
+      <NewHeader active={contactsActive} setActive={changeState} />
 
       <div id="1" className="firs_block">
         <main className="main_section">
@@ -44,16 +45,47 @@ function App() {
           </p>
         </main>
 
-          <div className="discover_button" onClick={()=>setContactsActive(true)}>
-            <img src="/images/left-up_arrow.svg" alt="left-up_arrow" />
-            <span>
-              Discover <br /> Metasun
-            </span>
-          </div>
+        <div
+          className="discover_button"
+          onClick={() => setContactsActive(true)}
+        >
+          <svg
+            className="icon"
+            width="56"
+            height="56"
+            viewBox="0 0 56 56"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.5 0.5H47.7929L55.5 8.20711V55.5H8.20711L0.5 47.7929V0.5Z"
+              stroke="#FBB92C"
+            />
+            <g clip-path="url(#clip0_30_60209)">
+              <path
+                className="inner_icon"
+                d="M23.2159 20.059L23.3023 21.4626L34.2157 20.7905L19.018 35.9882L20.0124 36.9826L35.2101 21.7848L34.538 32.6982L35.9416 32.7847L36.743 19.7721L36.2285 19.2576L23.2159 20.059Z"
+                fill="#FBB92C"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_30_60209">
+                <rect
+                  width="24"
+                  height="24"
+                  fill="white"
+                  transform="translate(16 16)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <span>
+            Discover <br /> Metasun
+          </span>
+        </div>
       </div>
-      <div id='2' className="new_block">
-       
-      </div>
+      <div id="2" className="new_block"></div>
       {/* ----------------1----------------- */}
       <div id="3" className="new_block">
         <div className="our__works">
@@ -128,24 +160,86 @@ function App() {
           <h1>Projects</h1>
           <div className="cards__block">
             <div className="card__item">
-              <div className="animations">   
+              <div className="animations">
                 <Matrix />
-
               </div>
-           
-              <h4>CryptoChurch</h4>
+
+              <h4>
+                CryptoChurch
+                <svg
+                  className="icon"
+                  width="56"
+                  height="56"
+                  viewBox="0 0 56 56"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.5 0.5H47.7929L55.5 8.20711V55.5H8.20711L0.5 47.7929V0.5Z"
+                    stroke="#FBB92C"
+                  />
+                  <g clip-path="url(#clip0_30_60209)">
+                    <path
+                      className="inner_icon"
+                      d="M23.2159 20.059L23.3023 21.4626L34.2157 20.7905L19.018 35.9882L20.0124 36.9826L35.2101 21.7848L34.538 32.6982L35.9416 32.7847L36.743 19.7721L36.2285 19.2576L23.2159 20.059Z"
+                      fill="#FBB92C"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_30_60209">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        transform="translate(16 16)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </h4>
               <p>
                 Donec facilisis tortor ut augue lacinia, at viverra est semper.
                 Sed sapien metus, scelerisque{" "}
               </p>
             </div>
             <div className="card__item">
-              
               <div className="animations">
-              <img src="/images/background.png" alt="background" />
+                <img src="/images/background.png" alt="background" />
               </div>
-          
-              <h4>The name of project one</h4>
+
+              <h4>
+                The name of project one
+                <svg
+                  className="icon"
+                  width="56"
+                  height="56"
+                  viewBox="0 0 56 56"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.5 0.5H47.7929L55.5 8.20711V55.5H8.20711L0.5 47.7929V0.5Z"
+                    stroke="#FBB92C"
+                  />
+                  <g clip-path="url(#clip0_30_60209)">
+                    <path
+                      className="inner_icon"
+                      d="M23.2159 20.059L23.3023 21.4626L34.2157 20.7905L19.018 35.9882L20.0124 36.9826L35.2101 21.7848L34.538 32.6982L35.9416 32.7847L36.743 19.7721L36.2285 19.2576L23.2159 20.059Z"
+                      fill="#FBB92C"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_30_60209">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        transform="translate(16 16)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </h4>
               <p>
                 Donec facilisis tortor ut augue lacinia, at viverra est semper.
                 Sed sapien metus, scelerisque{" "}
@@ -156,10 +250,26 @@ function App() {
       </div>
       {/* ----------footer------------- */}
       <footer className="foot">
-        <a href="#">@METASUN Services FZ-LLC.</a>
-        <img src="/images/Logo.svg" alt="logo" />
+        <div className="logo__foot">
+          <img src="/images/Logo.svg" alt="logo" />
+          <a href="#">@METASUN Services FZ-LLC.</a>
+        </div>
         <div>
           <span>Terms Of Service &nbsp; Privacy Policy</span>
+        </div>
+        <div className="join__us__foot">
+          <div className="join__us__foot__icons">
+            <a target='_blank' href="https://twitter.com/kuzbass888">
+              <img src="/images/twitter_yellow.svg" alt="twitter_yellow" />
+            </a>
+            <a target='_blank' href="https://discord.gg/FBRDkAz6">
+              <img src="/images/discord_yellow.svg" alt="discord_yellow" />
+            </a>
+            <a target='_blank' href="https://t.me/alex_qj1">
+              <img src="/images/telegram_yellow.svg" alt="telegram_yellow" />
+            </a>
+          </div>
+          <span>Join the community</span>
         </div>
       </footer>
     </div>
@@ -167,4 +277,3 @@ function App() {
 }
 
 export default App;
-
