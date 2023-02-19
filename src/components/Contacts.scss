@@ -66,7 +66,10 @@
   
   }
   @media screen and (max-width: 780px) {
-  background-size: contain;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
   .modal__content{
     p {
       font-size: 16px;
@@ -82,7 +85,6 @@
   }
   }
   @media screen and (max-width: 550px) {
-    background-size: contain;
      align-items: flex-start;
     .modal__content{
       height: 50vh;
